@@ -14,5 +14,9 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true, limit: "16kb"}));
 app.use(express.static("public"));
 
+app.get("/lol", (req,res) => {
+    res.json({message: "I check my server like this "});
+});
+
 
 export {app}
